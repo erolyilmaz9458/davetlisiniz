@@ -14,6 +14,7 @@
   "type": "commonjs",
   "dependencies": {
     "@remotion/cli": "^4.0.423",
+    "@remotion/lambda": "^4.0.423",
     "@remotion/player": "^4.0.423",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",

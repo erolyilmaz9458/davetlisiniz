@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sivas Düğün Davetiyeleri</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("tH9y7PthJZStF4ua_");
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- ==================== LANDING / GİRİŞ EKRANI ==================== -->
+    <section id="landing-section" class="active-section">
+        <div class="landing-wrapper">
+            <div class="landing-bg-overlay"></div>
+            <div class="landing-content">
+                <span class="material-icons-outlined landing-heart">favorite</span>
+                <p class="landing-top-text">SONSUZA BİR YOLCULUK</p>
+                <h1 class="landing-title">Aşkımıza<br>Tanıklık Edin</h1>
+                <p class="landing-desc">Size özel hazırlanmış dijital<br>davetiyenize erişmek için şifrenizi girin.</p>
+
+                <div class="landing-input-group">
+                    <label class="landing-label">GİRİŞ ŞİFRESİ</label>
+                    <input type="password" id="password-input" placeholder="● ● ● ● ● ●" maxlength="20"
+                        autocomplete="off">
+                </div>
+
+                <button id="login-btn" class="btn-gold">GİRİŞ YAP →</button>
+                <p id="error-message" class="error-message"></p>
+
+                <div class="landing-footer">
+                    <a href="tel:05060988858">ŞİFRENİZİ Mİ UNUTTUNUZ</a>
+                    <span>|</span>
+                    <a href="tel:05060988858">YARDIM</a>
+                </div>
+                <!-- Brand Footer -->
+                <div class="brand-footer-text">byAdelDijital</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== VENUE 1: GRAND KEMERHAN (Şifre: kemerhan) ==================== -->
+    <section id="venue-kemerhan" class="invitation-section hidden">
+        <!-- Home Sub-page -->
+        <div id="kemerhan-home" class="sub-page">
+            <div class="inv-phone-frame">
+                <div class="inv-badge">SİZE ÖZEL DAVETİYE</div>
+                <div class="inv-header">
+                </div>
+                <div class="inv-couple-photo">
+                    <img src="https://placehold.co/120x120/f5e6c8/d4a574?text=A%26M" alt="Çift Fotoğrafı">
+                </div>
+                <h1 class="inv-couple-names">Ayşe & Ahmet</h1>
+                <p class="inv-date-label">14 EYLÜL 2026</p>
+
+                <div class="inv-countdown-row">
+                    <div class="inv-countdown-item"><span class="inv-count-num" id="cd-days-1">124</span><span
+                            class="inv-count-label">GÜN</span></div>
+                    <div class="inv-countdown-item"><span class="inv-count-num" id="cd-hours-1">14</span><span
+                            class="inv-count-label">SAAT</span></div>
+                    <div class="inv-countdown-item"><span class="inv-count-num" id="cd-mins-1">32</span><span
+                            class="inv-count-label">DAKİKA</span></div>
+                    <div class="inv-countdown-item"><span class="inv-count-num" id="cd-secs-1">45</span><span
+                            class="inv-count-label">SANİYE</span></div>
+                </div>
+                <p class="inv-countdown-desc">Büyük Güne Kalan Süre</p>
+
+                <button class="btn-outline-gold"
+                    onclick="addToCalendar('Ayşe & Ahmet Düğün', '20260914T160000Z', '20260914T210000Z', 'Grand Kemerhan Düğün Salonu, Sivas')">
+                    <span class="material-icons-outlined">calendar_today</span> TAKVİME EKLE
+                </button>
+
+                <div class="inv-section-header">
+                    <span class="square-icon"></span>
+                    <h3>ETKİNLİK TAKVİMİ</h3>
+                </div>
+
+                <div class="inv-event-card">
+                    <div class="inv-event-content">
+                        <div class="venue-img-small">
+                            <img src="assets/grandkemerhan.jpg" alt="Grand Kemerhan">
+                        </div>
+                        <div class="inv-event-top">
+                            <h4>Kına Gecesi</h4>
+                        </div>
+                        <p class="inv-event-time">⏰ 19:00 - 23:00</p>
+                        <p class="inv-event-venue">Grand Kemerhan Düğün Salonu, Sivas</p>
+                        <div class="venue-contact-info">
+                            <p>Duğun günü ile aynı yer ve zamanda</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inv-event-card">
+                    <div class="inv-event-content">
+                        <div class="venue-img-small">
+                            <img src="assets/grandkemerhan.jpg" alt="Grand Kemerhan">
+                        </div>
+                        <div class="inv-event-top">
+                            <h4>Nikah & Düğün</h4>
+                            <div class="venue-socials">
+                                <a href="https://www.instagram.com/grandkemerhan/" target="_blank"><img
+                                        src="https://www.google.com/s2/favicons?domain=instagram.com" alt="IG"></a>
+                                <a href="https://www.facebook.com/grandkemerhan" target="_blank"><img
+                                        src="https://www.google.com/s2/favicons?domain=facebook.com" alt="FB"></a>
+                            </div>
+                        </div>
+                        <p class="inv-event-time">⏰ 19:00 - 00:00</p>
+                        <p class="inv-event-venue">Grand Kemerhan Düğün Salonu, Sivas</p>
+                        <div class="venue-contact-info">
+                            <p>📞 0533 022 49 58 (WhatsApp)</p>
+                            <p>🌐 grandkemerhan.com</p>
+                        </div>
+                        <button class="btn-gold btn-small"
+                            onclick="window.open('https://maps.app.goo.gl/i5L4J3Nq2G9SUBQW7', '_blank')">📍 Konuma
+                            Git</button>
+                    </div>
+                </div>
+
+                <div class="inv-quote-box">
+                    <p>"En mutlu günümüzde sizleri de aramızda görmekten onur duarız."</p>
+                </div>
+
+                <div class="inv-footer-branding">
+                    <p class="inv-footer-text">DİJİTAL DAVETİYE 2026</p>
+                    <div class="brand-footer-text-small">byAdelDijital</div>
+                </div>
+
+                <!-- Shortcut to RSVP -->
+                <button class="btn-rsvp-shortcut"
+                    onclick="switchSubTab('kemerhan-rsvp', document.querySelectorAll('#venue-kemerhan .nav-item')[2])">
+                    <span class="material-icons-outlined">event</span> Katılım Durumunu Bildir
+                </button>
+            </div>
+        </div>
+
+        <!-- RSVP Sub-page -->
+        <div id="kemerhan-rsvp" class="sub-page hidden">
+            <div class="inv-phone-frame rsvp-frame">
+                <div class="rsvp-header">
+                    <img src="assets/adel_digital_logo.png" alt="Adel Digital" class="rsvp-logo-img">
+                </div>
+
+                <div class="rsvp-card-white"
+                    onclick="switchSubTab('kemerhan-gallery', document.querySelectorAll('#venue-kemerhan .nav-item')[1])">
+                    <div class="gallery-preview-mini">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=150&q=80"
+                            alt="Galeri">
+                        <div class="preview-text">
+                            <strong>Bizim Karelerimize Göz Atın</strong>
+                            <p>Fotoğraf galerisini görüntüle</p>
+                        </div>
+                        <span class="material-icons-outlined">chevron_right</span>
+                    </div>
+                </div>
+
+                <div id="rsvp-form-1" class="rsvp-form-container">
+                    <h2 class="rsvp-form-title">Bizimle Olacak mısınız?</h2>
+                    <p class="rsvp-form-desc">Bu özel günümüzde yanımızda olmanızdan mutluluk duyarız.</p>
+
+                    <div class="rsvp-input-group">
+                        <label>Adınız Soyadınız</label>
+                        <input type="text" id="rsvp-name-1" class="rsvp-input" placeholder="Adınız Soyadınız"
+                            name="name" required>
+                        <input type="hidden" id="rsvp-status-1" value="Geliyorum">
+                    </div>
+
+                    <div class="rsvp-choice-grid">
+                        <div class="rsvp-choice-card active" onclick="selectRSVP(this, 'Geliyorum', 'rsvp-status-1')">
+                            <div class="choice-icon"><span class="material-icons-outlined">check</span></div>
+                            <span class="choice-text">Geliyorum</span>
+                        </div>
+                        <div class="rsvp-choice-card" onclick="selectRSVP(this, 'Gelemiyorum', 'rsvp-status-1')">
+                            <div class="choice-icon"><span class="material-icons-outlined">close</span></div>
+                            <span class="choice-text">Gelemiyorum</span>
+                        </div>
+                    </div>
+
+                    <div class="rsvp-input-group">
+                        <label>Kaç kişi katılacaksınız?</label>
+                        <select id="rsvp-count-1" class="rsvp-select">
+                            <option value="1 Kişi">1 Kişi</option>
+                            <option value="2 Kişi">2 Kişi</option>
+                            <option value="3 Kişi">3 Kişi</option>
+                            <option value="4 Kişi">4 Kişi</option>
+                            <option value="5+ Kişi">5+ Kişi</option>
+                        </select>
+                    </div>
+
+                    <div class="rsvp-input-group">
+                        <label>Notunuz (Opsiyonel)</label>
+                        <textarea id="rsvp-message-1" class="rsvp-textarea"
+                            placeholder="Bizlere iletmek istediğiniz bir notunuz var mı?"></textarea>
+                    </div>
+
+                    <button type="button" class="btn-gold btn-full rsvp-submit"
+                        onclick="sendRSVP(this, 'Grand Kemerhan', 'Ayşe & Ahmet', 'rsvp-name-1', 'rsvp-status-1', 'rsvp-count-1', 'rsvp-message-1')">Cevabını
+                        Gönder</button>
+                </div>
+
+                <div class="inv-footer-branding">
+                    <p class="inv-footer-text">DİJİTAL DAVETİYE 2026</p>
+                    <div class="brand-footer-text-small">byAdelDijital</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery Sub-page -->
+        <div id="kemerhan-gallery" class="sub-page hidden">
+            <div class="inv-phone-frame gallery-frame">
+                <div class="inv-badge">FOTOĞRAF GALERİSİ <span class="material-icons-outlined"
+                        style="font-size:12px; margin-left:5px;">share</span></div>
+                <div class="gallery-header">
+                    <h1 class="gallery-title">Bizim <span>Karelerimiz</span></h1>
+                    <p class="gallery-subtitle">En mutlu anlarımızdan özenle seçilmiş, sevgi dolu hikayemiz.</p>
+                </div>
+
+                <div class="gallery-filter-bar">
+                    <button class="filter-btn active" onclick="filterGallery('Tümü', this)">Tümü</button>
+                    <button class="filter-btn" onclick="filterGallery('Nişan', this)">Nişan</button>
+                    <button class="filter-btn" onclick="filterGallery('Dış Çekim', this)">Dış Çekim</button>
+                    <button class="filter-btn" onclick="filterGallery('Hazırlık', this)">Hazırlık</button>
+                    <button class="filter-btn" onclick="filterGallery('Mekan', this)">Mekan</button>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="Nişan" onclick="openLightbox(this)"><img
+                            src="assets/nisan_1.png" alt=""></div>
+                    <div class="gallery-item" data-category="Dış Çekim" onclick="openLightbox(this)"><img
+                            src="assets/dis_cekim_1.png" alt=""></div>
+                    <div class="gallery-item" data-category="Mekan" onclick="openLightbox(this)"><img
+                            src="assets/grandkemerhan.jpg" alt=""></div>
+                    <div class="gallery-item" data-category="Hazırlık" onclick="openLightbox(this)"><img
+                            src="assets/hazirlik_1.png" alt=""></div>
+                    <div class="gallery-item" data-category="Nişan" onclick="openLightbox(this)"><img
+                            src="assets/nisan_1.png" alt=""></div>
+                    <div class="gallery-item" data-category="Mekan" onclick="openLightbox(this)"><img
+                            src="assets/mekan_1.png" alt=""></div>
+                </div>
+
+                <div class="inv-footer-branding">
+                    <p class="inv-footer-text">DİJİTAL DAVETİYE 2026</p>
+                    <div class="brand-footer-text-small">byAdelDijital</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <button class="nav-item active" onclick="switchSubTab('kemerhan-home', this)">
+                <span class="material-icons-outlined">home</span>
+                <span>Ana Sayfa</span>
+            </button>
+            <button class="nav-item" onclick="switchSubTab('kemerhan-gallery', this)">
+                <span class="material-icons-outlined">image</span>
+                <span>Galeri</span>
+            </button>
+            <button class="nav-item" onclick="switchSubTab('kemerhan-rsvp', this)">
+                <span class="material-icons-outlined">event</span>
+                <span>Katılım</span>
+            </button>
+            <button class="nav-item" onclick="location.reload()">
+                <span class="material-icons-outlined">logout</span>
+                <span>Çıkış</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- ==================== VENUE 2: GRAND MASAL (Şifre: masal2026) ==================== -->
+    <section id="venue-tanyildiz" class="invitation-section hidden">
+        <!-- Home Sub-page -->
+        <div id="masal-home" class="sub-page">
+            <div class="inv-phone-frame">
+                <div class="inv-badge">SİZE ÖZEL DAVETİYE</div>
+                <div class="inv-header">
+                </div>
+                <div class="inv-couple-photo">
+                    <img src="https://placehold.co/120x120/f5e6c8/d4a574?text=S%26M" alt="Çift Fotoğrafı">
+                </div>
+                <h1 class="inv-couple-names">Selin & Mert</h1>
+                <p class="inv-date-label">22 AĞUSTOS 2026</p>
+
+                <div class="inv-countdown-row">
+                    <div class="inv-countdown-item"><span class="inv-count-num" id="cd-days-2">100</span><span
+                            class="inv-count-label">GÜN</span></div>
+                    <div class="inv-countdown-item"><span class="inv-count-num" id="cd-hours-2">12</span><span
+                            class="inv-count-label">SAAT</span></div>
+                    <div class="inv-countdown-item"><span class="inv-count-num" id="cd-mins-2">15</span><span
+                            class="inv-count-label">DAKİKA</span></div>
+                    <div class="inv-countdown-item"><span class="inv-count-num" id="cd-secs-2">30</span><span
+                            class="inv-count-label">SANİYE</span></div>
+                </div>
+                <p class="inv-countdown-desc">Büyük Güne Kalan Süre</p>
+
+                <button class="btn-outline-gold"
+                    onclick="addToCalendar('Selin & Mert Düğün', '20260822T190000Z', '20260823T000000Z', 'Grand Masal Düğün Sarayı, Sivas')">
+                    <span class="material-icons-outlined">calendar_today</span> TAKVİME EKLE
+                </button>
+
+                <div class="inv-section-header">
+                    <span class="square-icon"></span>
+                    <h3>ETKİNLİK TAKVİMİ</h3>
+                </div>
+
+                <div class="inv-event-card">
+                    <div class="inv-event-content">
+                        <div class="venue-img-small">
+                            <img src="assets/kina_reference_ui.jpg" alt="Kına Mekanı">
+                        </div>
+                        <div class="inv-event-top">
+                            <h4>Kına Gecesi</h4>
+                        </div>
+                        <p class="inv-event-time">⏰ 19:00 - 23:00</p>
+                        <p class="inv-event-venue">Grand Masal Düğün Sarayı, Sivas</p>
+                        <div class="venue-contact-info">
+                            <p>Duğun günü ile aynı yer ve zamanda</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inv-event-card">
+                    <div class="inv-event-content">
+                        <div class="venue-img-carousel">
+                            <img src="assets/grandmasal_1.jpg" alt="Grand Masal 1">
+                            <img src="assets/grandmasal_2.jpg" alt="Grand Masal 2">
+                            <img src="assets/grandmasal_outdoor.jpg" alt="Grand Masal Dış">
+                        </div>
+                        <div class="inv-event-top">
+                            <h4>Nikah & Düğün</h4>
+                        </div>
+                        <p class="inv-event-time">⏰ 19:00 - 00:00</p>
+                        <p class="inv-event-venue">Grand Masal Düğün Sarayı, Sivas</p>
+                        <div class="venue-contact-info">
+                            <p>📞 0364 226 20 03</p>
+                            <p>🌐 grandmasal.com.tr</p>
+                        </div>
+                        <button class="btn-gold btn-small"
+                            onclick="window.open('https://maps.app.goo.gl/jjumaoqCUHyQb1Rm7', '_blank')">📍 Konuma
+                            Git</button>
+                    </div>
+                </div>
+
+                <div class="inv-quote-box">
+                    <p>"Mutluluğumuzu paylaşmaya tüm sevdiklerimizi bekliyoruz."</p>
+                </div>
+
+                <div class="inv-footer-branding">
+                    <p class="inv-footer-text">DİJİTAL DAVETİYE 2026</p>
+                    <div class="brand-footer-text-small">byAdelDijital</div>
+                </div>
+
+                <!-- Shortcut to RSVP -->
+                <button class="btn-rsvp-shortcut"
+                    onclick="switchSubTab('masal-rsvp', document.querySelectorAll('#venue-tanyildiz .nav-item')[2])">
+                    <span class="material-icons-outlined">event</span> Katılım Durumunu Bildir
+                </button>
+            </div>
+        </div>
+
+        <!-- RSVP Sub-page -->
+        <div id="masal-rsvp" class="sub-page hidden">
+            <div class="inv-phone-frame rsvp-frame">
+                <div class="rsvp-header">
+                    <img src="assets/adel_digital_logo.png" alt="Adel Digital" class="rsvp-logo-img">
+                </div>
+
+                <div class="rsvp-card-white"
+                    onclick="switchSubTab('masal-gallery', document.querySelectorAll('#venue-tanyildiz .nav-item')[1])">
+                    <div class="gallery-preview-mini">
+                        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=150&q=80"
+                            alt="Galeri">
+                        <div class="preview-text">
+                            <strong>Bizim Karelerimize Göz Atın</strong>
+                            <p>Fotoğraf galerisini görüntüle</p>
+                        </div>
+                        <span class="material-icons-outlined">chevron_right</span>
+                    </div>
+                </div>
+
+                <div id="rsvp-form-2" class="rsvp-form-container">
+                    <h2 class="rsvp-form-title">Bizimle Olacak mısınız?</h2>
+                    <p class="rsvp-form-desc">Bu özel günümüzde yanımızda olmanızdan mutluluk duyarız.</p>
+
+                    <div class="rsvp-input-group">
+                        <label>Adınız Soyadınız</label>
+                        <input type="text" id="rsvp-name-2" class="rsvp-input" placeholder="Adınız Soyadınız"
+                            name="name" required>
+                        <input type="hidden" id="rsvp-status-2" value="Geliyorum">
+                    </div>
+
+                    <div class="rsvp-choice-grid">
+                        <div class="rsvp-choice-card active" onclick="selectRSVP(this, 'Geliyorum', 'rsvp-status-2')">
+                            <div class="choice-icon"><span class="material-icons-outlined">check</span></div>
+                            <span class="choice-text">Geliyorum</span>
+                        </div>
+                        <div class="rsvp-choice-card" onclick="selectRSVP(this, 'Gelemiyorum', 'rsvp-status-2')">
+                            <div class="choice-icon"><span class="material-icons-outlined">close</span></div>
+                            <span class="choice-text">Gelemiyorum</span>
+                        </div>
+                    </div>
+
+                    <div class="rsvp-input-group">
+                        <label>Kaç kişi katılacaksınız?</label>
+                        <select id="rsvp-count-2" class="rsvp-select">
+                            <option value="1 Kişi">1 Kişi</option>
+                            <option value="2 Kişi">2 Kişi</option>
+                            <option value="3 Kişi">3 Kişi</option>
+                            <option value="4 Kişi">4 Kişi</option>
+                            <option value="5+ Kişi">5+ Kişi</option>
+                        </select>
+                    </div>
+
+                    <div class="rsvp-input-group">
+                        <label>Notunuz (Opsiyonel)</label>
+                        <textarea id="rsvp-message-2" class="rsvp-textarea"
+                            placeholder="Bizlere iletmek istediğiniz bir notunuz var mı?"></textarea>
+                    </div>
+
+                    <button type="button" class="btn-gold btn-full rsvp-submit"
+                        onclick="sendRSVP(this, 'Grand Masal', 'Selin & Mert', 'rsvp-name-2', 'rsvp-status-2', 'rsvp-count-2', 'rsvp-message-2')">Cevabını
+                        Gönder</button>
+                </div>
+
+                <div class="inv-footer-branding">
+                    <p class="inv-footer-text">DİJİTAL DAVETİYE 2026</p>
+                    <div class="brand-footer-text-small">byAdelDijital</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery Sub-page -->
+        <div id="masal-gallery" class="sub-page hidden">
+            <div class="inv-phone-frame gallery-frame">
+                <div class="inv-badge">FOTOĞRAF GALERİSİ <span class="material-icons-outlined"
+                        style="font-size:12px; margin-left:5px;">share</span></div>
+                <div class="gallery-header">
+                    <h1 class="gallery-title">Bizim <span>Karelerimiz</span></h1>
+                    <p class="gallery-subtitle">En mutlu anlarımızdan özenle seçilmiş, sevgi dolu hikayemiz.</p>
+                </div>
+
+                <div class="gallery-filter-bar">
+                    <button class="filter-btn active" onclick="filterGallery('Tümü', this)">Tümü</button>
+                    <button class="filter-btn" onclick="filterGallery('Nişan', this)">Nişan</button>
+                    <button class="filter-btn" onclick="filterGallery('Dış Çekim', this)">Dış Çekim</button>
+                    <button class="filter-btn" onclick="filterGallery('Hazırlık', this)">Hazırlık</button>
+                    <button class="filter-btn" onclick="filterGallery('Mekan', this)">Mekan</button>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="Mekan" onclick="openLightbox(this)"><img
+                            src="assets/grand_masal_gallery_1.jpg" alt=""></div>
+                    <div class="gallery-item" data-category="Dış Çekim" onclick="openLightbox(this)"><img
+                            src="assets/grand_masal_gallery_3.jpg" alt=""></div>
+                    <div class="gallery-item" data-category="Mekan" onclick="openLightbox(this)"><img
+                            src="assets/grand_masal_gallery_2.jpg" alt=""></div>
+                    <div class="gallery-item" data-category="Hazırlık" onclick="openLightbox(this)"><img
+                            src="assets/hazirlik_1.png" alt=""></div>
+                    <div class="gallery-item" data-category="Nişan" onclick="openLightbox(this)"><img
+                            src="assets/nisan_1.png" alt=""></div>
+                    <div class="gallery-item" data-category="Mekan" onclick="openLightbox(this)"><img
+                            src="assets/mekan_1.png" alt=""></div>
+                </div>
+
+                <div class="inv-footer-branding">
+                    <p class="inv-footer-text">DİJİTAL DAVETİYE 2026</p>
+                    <div class="brand-footer-text-small">byAdelDijital</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <button class="nav-item active" onclick="switchSubTab('masal-home', this)">
+                <span class="material-icons-outlined">home</span>
+                <span>Ana Sayfa</span>
+            </button>
+            <button class="nav-item" onclick="switchSubTab('masal-gallery', this)">
+                <span class="material-icons-outlined">image</span>
+                <span>Galeri</span>
+            </button>
+            <button class="nav-item" onclick="switchSubTab('masal-rsvp', this)">
+                <span class="material-icons-outlined">event</span>
+                <span>Katılım</span>
+            </button>
+            <button class="nav-item" onclick="location.reload()">
+                <span class="material-icons-outlined">logout</span>
+                <span>Çıkış</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox-modal hidden" onclick="closeLightbox()">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

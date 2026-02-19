@@ -175,8 +175,11 @@ window.sendRSVP = function (btnContext, venueName, coupleNames, nameId, statusId
     const publicKey = 'tH9y7PthJZStF4ua_';
 
     // === AD SOYAD HER YERDE OLMALI ===
+    // combinedMessage: Tüm bilgileri tek bir metin olarak birleştirir
     const combinedMessage = `📋 KATILIM BİLDİRİMİ\n━━━━━━━━━━━━━━━━━━━\nAd Soyad: ${fullName}\nGelin & Damat: ${coupleNames}\nMekan: ${venueName}\nKatılım Durumu: ${rsvpStatus}\nKişi Sayısı: ${guestCount}\nNot: ${note || '-'}`;
 
+    // templateParams: EmailJS template değişkenleri
+    // Ad Soyad bilgisi: from_name, name, sender_name ve message içinde
     const templateParams = {
         from_name: fullName,
         name: fullName,
@@ -209,15 +212,16 @@ window.sendRSVP = function (btnContext, venueName, coupleNames, nameId, statusId
             })
             .catch(function (error) {
                 console.error('❌ EmailJS Hatası:', error);
-                window.triggerMailTo(fullName, venueName, coupleNames, rsvpStatus, guestCount, note);
+                console.log('📨 Yedek yöntem (Mailto) kullanılıyor. Ad Soyad:', fullName);
                 btnContext.textContent = originalBtnText;
                 btnContext.disabled = false;
+                window.triggerMailTo(fullName, venueName, coupleNames, rsvpStatus, guestCount, note);
             });
     } else {
         console.error('EmailJS SDK yüklü değil! Mailto yedek yöntemi kullanılıyor.');
-        window.triggerMailTo(fullName, venueName, coupleNames, rsvpStatus, guestCount, note);
         btnContext.textContent = originalBtnText;
         btnContext.disabled = false;
+        window.triggerMailTo(fullName, venueName, coupleNames, rsvpStatus, guestCount, note);
     }
 };
 

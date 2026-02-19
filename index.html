@@ -75,7 +75,7 @@
                 <div class="landing-footer">
                     <a href="tel:05060988858">ŞİFRENİZİ Mİ UNUTTUNUZ</a>
                     <span>|</span>
-                    <a href="#">YARDIM</a>
+                    <a href="tel:05060988858">YARDIM</a>
                 </div>
                 <!-- Brand Footer -->
                 <div class="brand-footer-text">byAdelDijital</div>
@@ -83,10 +83,10 @@
         </div>
     </section>
 
-    <!-- ==================== VENUE 1: GRAND KEMERHAN (Şifre: sivas58) ==================== -->
-    <section id="venue-pasabahce" class="invitation-section hidden">
+    <!-- ==================== VENUE 1: GRAND KEMERHAN (Şifre: kemerhan) ==================== -->
+    <section id="venue-kemerhan" class="invitation-section hidden">
         <!-- Home Sub-page -->
-        <div id="pasabahce-home" class="sub-page">
+        <div id="kemerhan-home" class="sub-page">
             <div class="inv-phone-frame">
                 <div class="inv-badge">SİZE ÖZEL DAVETİYE</div>
                 <div class="inv-header">
@@ -122,7 +122,23 @@
                 <div class="inv-event-card">
                     <div class="inv-event-content">
                         <div class="venue-img-small">
-                            <img src="assets/GrandKemerhan.jpg" alt="Grand Kemerhan">
+                            <img src="assets/grandkemerhan.jpg" alt="Grand Kemerhan">
+                        </div>
+                        <div class="inv-event-top">
+                            <h4>Kına Gecesi</h4>
+                        </div>
+                        <p class="inv-event-time">⏰ 19:00 - 23:00</p>
+                        <p class="inv-event-venue">Grand Kemerhan Düğün Salonu, Sivas</p>
+                        <div class="venue-contact-info">
+                            <p>Duğun günü ile aynı yer ve zamanda</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inv-event-card">
+                    <div class="inv-event-content">
+                        <div class="venue-img-small">
+                            <img src="assets/grandkemerhan.jpg" alt="Grand Kemerhan">
                         </div>
                         <div class="inv-event-top">
                             <h4>Nikah & Düğün</h4>
@@ -156,25 +172,21 @@
 
                 <!-- Shortcut to RSVP -->
                 <button class="btn-rsvp-shortcut"
-                    onclick="switchSubTab('pasabahce-rsvp', document.querySelectorAll('#venue-pasabahce .nav-item')[2])">
+                    onclick="switchSubTab('kemerhan-rsvp', document.querySelectorAll('#venue-kemerhan .nav-item')[2])">
                     <span class="material-icons-outlined">event</span> Katılım Durumunu Bildir
                 </button>
             </div>
         </div>
 
         <!-- RSVP Sub-page -->
-        <div id="pasabahce-rsvp" class="sub-page hidden">
+        <div id="kemerhan-rsvp" class="sub-page hidden">
             <div class="inv-phone-frame rsvp-frame">
-                <div class="rsvp-header-decoration">
-                    <img src="https://placehold.co/100x100/ffffff/eebd2b?text=Flowers" alt="Decoration">
-                </div>
                 <div class="rsvp-header">
-                    <h1 class="rsvp-title">Lale Devri</h1>
-                    <p class="rsvp-subtitle">DÜĞÜN DAVETİYESİ</p>
+                    <img src="assets/adel_digital_logo.png" alt="Adel Digital" class="rsvp-logo-img">
                 </div>
 
                 <div class="rsvp-card-white"
-                    onclick="switchSubTab('pasabahce-gallery', document.querySelectorAll('#venue-pasabahce .nav-item')[1])">
+                    onclick="switchSubTab('kemerhan-gallery', document.querySelectorAll('#venue-kemerhan .nav-item')[1])">
                     <div class="gallery-preview-mini">
                         <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=150&q=80"
                             alt="Galeri">
@@ -238,7 +250,7 @@
         </div>
 
         <!-- Gallery Sub-page -->
-        <div id="pasabahce-gallery" class="sub-page hidden">
+        <div id="kemerhan-gallery" class="sub-page hidden">
             <div class="inv-phone-frame gallery-frame">
                 <div class="inv-badge">FOTOĞRAF GALERİSİ <span class="material-icons-outlined"
                         style="font-size:12px; margin-left:5px;">share</span></div>
@@ -261,7 +273,7 @@
                     <div class="gallery-item" data-category="Dış Çekim" onclick="openLightbox(this)"><img
                             src="assets/dis_cekim_1.png" alt=""></div>
                     <div class="gallery-item" data-category="Mekan" onclick="openLightbox(this)"><img
-                            src="assets/GrandKemerhan.jpg" alt=""></div>
+                            src="assets/grandkemerhan.jpg" alt=""></div>
                     <div class="gallery-item" data-category="Hazırlık" onclick="openLightbox(this)"><img
                             src="assets/hazirlik_1.png" alt=""></div>
                     <div class="gallery-item" data-category="Nişan" onclick="openLightbox(this)"><img
@@ -279,15 +291,15 @@
 
         <!-- Bottom Navigation -->
         <div class="bottom-nav">
-            <button class="nav-item active" onclick="switchSubTab('pasabahce-home', this)">
+            <button class="nav-item active" onclick="switchSubTab('kemerhan-home', this)">
                 <span class="material-icons-outlined">home</span>
                 <span>Ana Sayfa</span>
             </button>
-            <button class="nav-item" onclick="switchSubTab('pasabahce-gallery', this)">
+            <button class="nav-item" onclick="switchSubTab('kemerhan-gallery', this)">
                 <span class="material-icons-outlined">image</span>
                 <span>Galeri</span>
             </button>
-            <button class="nav-item" onclick="switchSubTab('pasabahce-rsvp', this)">
+            <button class="nav-item" onclick="switchSubTab('kemerhan-rsvp', this)">
                 <span class="material-icons-outlined">event</span>
                 <span>Katılım</span>
             </button>
@@ -298,7 +310,7 @@
         </div>
     </section>
 
-    <!-- ==================== VENUE 2: GRAND MASAL (Şifre: dugun2026) ==================== -->
+    <!-- ==================== VENUE 2: GRAND MASAL (Şifre: masal2026) ==================== -->
     <section id="venue-tanyildiz" class="invitation-section hidden">
         <!-- Home Sub-page -->
         <div id="masal-home" class="sub-page">
@@ -337,7 +349,7 @@
                 <div class="inv-event-card">
                     <div class="inv-event-content">
                         <div class="venue-img-small">
-                            <img src="assets/GrandMasal_Outdoor.jpg" alt="Kına Mekanı">
+                            <img src="assets/grandmasal_outdoor.jpg" alt="Kına Mekanı">
                         </div>
                         <div class="inv-event-top">
                             <h4>Kına Gecesi</h4>
@@ -345,7 +357,7 @@
                         <p class="inv-event-time">⏰ 19:00 - 23:00</p>
                         <p class="inv-event-venue">Grand Masal Düğün Sarayı, Sivas</p>
                         <div class="venue-contact-info">
-                            <p>Düğün günü ile aynı yer ve zamanda</p>
+                            <p>Duğun günü ile aynı yer ve zamanda</p>
                         </div>
                     </div>
                 </div>
@@ -353,9 +365,9 @@
                 <div class="inv-event-card">
                     <div class="inv-event-content">
                         <div class="venue-img-carousel">
-                            <img src="assets/GrandMasal_1.jpg" alt="Grand Masal 1">
-                            <img src="assets/GrandMasal_2.jpg" alt="Grand Masal 2">
-                            <img src="assets/GrandMasal_Outdoor.jpg" alt="Grand Masal Dış">
+                            <img src="assets/grandmasal_1.jpg" alt="Grand Masal 1">
+                            <img src="assets/grandmasal_2.jpg" alt="Grand Masal 2">
+                            <img src="assets/grandmasal_outdoor.jpg" alt="Grand Masal Dış">
                         </div>
                         <div class="inv-event-top">
                             <h4>Nikah & Düğün</h4>
@@ -392,12 +404,8 @@
         <!-- RSVP Sub-page -->
         <div id="masal-rsvp" class="sub-page hidden">
             <div class="inv-phone-frame rsvp-frame">
-                <div class="rsvp-header-decoration">
-                    <img src="https://placehold.co/100x100/ffffff/eebd2b?text=Flowers" alt="Decoration">
-                </div>
                 <div class="rsvp-header">
-                    <h1 class="rsvp-title">Lale Devri</h1>
-                    <p class="rsvp-subtitle">DÜĞÜN DAVETİYESİ</p>
+                    <img src="assets/adel_digital_logo.png" alt="Adel Digital" class="rsvp-logo-img">
                 </div>
 
                 <div class="rsvp-card-white"
@@ -484,11 +492,11 @@
 
                 <div class="gallery-grid">
                     <div class="gallery-item" data-category="Mekan" onclick="openLightbox(this)"><img
-                            src="assets/GrandMasal_1.jpg" alt=""></div>
+                            src="assets/grandmasal_1.jpg" alt=""></div>
                     <div class="gallery-item" data-category="Dış Çekim" onclick="openLightbox(this)"><img
-                            src="assets/GrandMasal_Outdoor.jpg" alt=""></div>
+                            src="assets/grandmasal_outdoor.jpg" alt=""></div>
                     <div class="gallery-item" data-category="Mekan" onclick="openLightbox(this)"><img
-                            src="assets/GrandMasal_2.jpg" alt=""></div>
+                            src="assets/grandmasal_2.jpg" alt=""></div>
                     <div class="gallery-item" data-category="Hazırlık" onclick="openLightbox(this)"><img
                             src="assets/hazirlik_1.png" alt=""></div>
                     <div class="gallery-item" data-category="Nişan" onclick="openLightbox(this)"><img
@@ -531,8 +539,6 @@
         <img class="lightbox-content" id="lightbox-img">
     </div>
 
-    <!-- EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 

@@ -5,29 +5,51 @@
 // Global Variables
 const passwords = {
     'kemerhan': 'venue-kemerhan',
-    'masal2026': 'venue-tanyildiz'
+    'masal2026': 'venue-tanyildiz',
+    'masal': 'venue-tanyildiz',
+    'malia': 'venue-malia',
+    'malia2026': 'venue-malia'
 };
 
 // 1. Navigation & Password Logic
 window.checkPassword = function () {
+    console.log('checkPassword function triggered');
     const passwordInput = document.getElementById('password-input');
-    if (!passwordInput) return;
+    const errorMsg = document.getElementById('error-message');
+
+    if (!passwordInput) {
+        console.error('Password input element not found');
+        return;
+    }
 
     const input = passwordInput.value.trim().toLowerCase();
-    console.log('Girilen Şifre:', input); // Debug için log ekledim
-    if (passwords[input]) {
-        document.getElementById('landing-section').classList.add('hidden');
+    console.log('Entered Password:', input);
 
+    if (passwords[input]) {
+        console.log('Password matched for venue:', passwords[input]);
+
+        // Hide landing
+        const landing = document.getElementById('landing-section');
+        if (landing) landing.classList.add('hidden');
+
+        // Hide all venues first
         const venueSections = document.querySelectorAll('.invitation-section');
         venueSections.forEach(sec => sec.classList.add('hidden'));
 
-        const target = document.getElementById(passwords[input]);
+        // Show target venue
+        const targetId = passwords[input];
+        const target = document.getElementById(targetId);
+
         if (target) {
             target.classList.remove('hidden');
             target.classList.add('active-section');
+            console.log('Venue shown successfully');
+        } else {
+            console.error('Target venue element not found:', targetId);
+            if (errorMsg) errorMsg.textContent = 'Mekan içeriği yüklenemedi.';
         }
     } else {
-        const errorMsg = document.getElementById('error-message');
+        console.log('Password match failed');
         if (errorMsg) {
             errorMsg.textContent = 'Hatalı şifre. Lütfen tekrar deneyiniz.';
             setTimeout(() => { errorMsg.textContent = ''; }, 3000);
@@ -150,7 +172,7 @@ window.sendRSVP = function (btnContext, venueName, coupleNames, nameId, statusId
     btnContext.disabled = true;
 
     // EmailJS Bilgileri
-    const serviceId = 'erolyilmaz9458@gmail.com';
+    const serviceId = 'service_4jtydl6';
     const templateId = 'template_qvsqxnl';
     const publicKey = 'tH9y7PthJZStF4ua_';
 
@@ -178,7 +200,7 @@ window.sendRSVP = function (btnContext, venueName, coupleNames, nameId, statusId
     console.log('📧 Gönderilecek Veriler:', templateParams);
 
     if (typeof emailjs !== 'undefined') {
-        emailjs.send(serviceId, templateId, templateParams, publicKey)
+        emailjs.send(serviceId, templateId, templateParams)
             .then(function () {
                 console.log('✅ EmailJS Başarılı! Ad Soyad:', fullName);
                 alert('✅ Yanıtınız başarıyla iletildi!\n\nAd Soyad: ' + fullName + '\nDurum: ' + rsvpStatus);
@@ -283,7 +305,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(update, 1000);
     };
 
-    const venuesData = [{ id: 1, date: '2026-09-14T19:00:00' }, { id: 2, date: '2026-08-22T19:00:00' }];
+    const venuesData = [{ id: 1, date: '2026-09-14T19:00:00' }, { id: 2, date: '2026-08-22T19:00:00' }, { id: 3, date: '2026-11-07T19:00:00' }];
     venuesData.forEach(venue => {
         startCountdown(
             new Date(venue.date),

@@ -39,7 +39,7 @@
                         autocomplete="off">
                 </div>
 
-                <button id="login-btn" class="btn-gold">GİRİŞ YAP →</button>
+                <button id="login-btn" class="btn-gold" onclick="window.checkPassword()">GİRİŞ YAP →</button>
                 <p id="error-message" class="error-message"></p>
 
                 <div class="landing-footer">
@@ -319,7 +319,7 @@
                 <div class="inv-event-card">
                     <div class="inv-event-content">
                         <div class="venue-img-small">
-                            <img src="assets/kina_reference_ui.jpg" alt="Kına Mekanı">
+                            <img src="assets/grandmasal_outdoor.jpg" alt="Kına Mekanı">
                         </div>
                         <div class="inv-event-top">
                             <h4>Kına Gecesi</h4>
@@ -462,11 +462,11 @@
 
                 <div class="gallery-grid">
                     <div class="gallery-item" data-category="Mekan" onclick="openLightbox(this)"><img
-                            src="assets/grand_masal_gallery_1.jpg" alt=""></div>
+                            src="assets/grandmasal_1.jpg" alt=""></div>
                     <div class="gallery-item" data-category="Dış Çekim" onclick="openLightbox(this)"><img
-                            src="assets/grand_masal_gallery_3.jpg" alt=""></div>
+                            src="assets/grandmasal_outdoor.jpg" alt=""></div>
                     <div class="gallery-item" data-category="Mekan" onclick="openLightbox(this)"><img
-                            src="assets/grand_masal_gallery_2.jpg" alt=""></div>
+                            src="assets/grandmasal_2.jpg" alt=""></div>
                     <div class="gallery-item" data-category="Hazırlık" onclick="openLightbox(this)"><img
                             src="assets/hazirlik_1.png" alt=""></div>
                     <div class="gallery-item" data-category="Nişan" onclick="openLightbox(this)"><img
@@ -493,6 +493,232 @@
                 <span>Galeri</span>
             </button>
             <button class="nav-item" onclick="switchSubTab('masal-rsvp', this)">
+                <span class="material-icons-outlined">event</span>
+                <span>Katılım</span>
+            </button>
+            <button class="nav-item" onclick="location.reload()">
+                <span class="material-icons-outlined">logout</span>
+                <span>Çıkış</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- ==================== VENUE 3: MALİA HOTEL (Şifre: malia / malia2026) ==================== -->
+    <section id="venue-malia" class="invitation-section hidden">
+        <!-- Home Sub-page -->
+        <div id="malia-home" class="sub-page">
+            <div class="inv-phone-frame">
+                <div class="inv-badge">SİZE ÖZEL DAVETİYE</div>
+                <div class="inv-header"></div>
+                <div class="inv-couple-photo">
+                    <img src="https://placehold.co/120x120/f5e6c8/d4a574?text=Z%26E" alt="Çift Fotoğrafı">
+                </div>
+                <h1 class="inv-couple-names">Zeynep & Emre</h1>
+                <p class="inv-date-label">7 KASIM 2026</p>
+
+                <div class="inv-countdown-row">
+                    <div class="inv-countdown-item"><span class="inv-count-num" id="cd-days-3">--</span><span class="inv-count-label">GÜN</span></div>
+                    <div class="inv-countdown-item"><span class="inv-count-num" id="cd-hours-3">--</span><span class="inv-count-label">SAAT</span></div>
+                    <div class="inv-countdown-item"><span class="inv-count-num" id="cd-mins-3">--</span><span class="inv-count-label">DAKİKA</span></div>
+                    <div class="inv-countdown-item"><span class="inv-count-num" id="cd-secs-3">--</span><span class="inv-count-label">SANİYE</span></div>
+                </div>
+                <p class="inv-countdown-desc">Büyük Güne Kalan Süre</p>
+
+                <button class="btn-outline-gold"
+                    onclick="addToCalendar('Zeynep & Emre Düğün', '20261107T160000Z', '20261107T210000Z', 'Malia Hotel, Sivas')">
+                    <span class="material-icons-outlined">calendar_today</span> TAKVİME EKLE
+                </button>
+
+                <div class="inv-section-header">
+                    <span class="square-icon"></span>
+                    <h3>ETKİNLİK TAKVİMİ</h3>
+                </div>
+
+                <div class="inv-event-card">
+                    <div class="inv-event-content">
+                        <div class="venue-img-small">
+                            <img src="https://i.dugun.com/gallery/62691/preview_malia-hotel_ZE1g4ERc.jpg" alt="Malia Hotel Kına">
+                        </div>
+                        <div class="inv-event-top">
+                            <h4>Kına Gecesi</h4>
+                        </div>
+                        <p class="inv-event-time">⏰ 19:00 - 23:00</p>
+                        <p class="inv-event-venue">Malia Hotel, Sivas</p>
+                        <div class="venue-contact-info">
+                            <p>Düğün günü ile aynı yer ve zamanda</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inv-event-card">
+                    <div class="inv-event-content">
+                        <div class="venue-img-carousel">
+                            <img src="https://i.dugun.com/gallery/62691/preview_malia-hotel_ZE1g4ERc.jpg" alt="Malia Hotel 1">
+                            <img src="https://i.dugun.com/gallery/62691/preview_malia-hotel_hf24Y3hx.jpg" alt="Malia Hotel 2">
+                            <img src="https://i.dugun.com/gallery/62691/preview_malia-hotel_xfMeAm2g.jpg" alt="Malia Hotel 3">
+                        </div>
+                        <div class="inv-event-top">
+                            <h4>Nikah & Düğün</h4>
+                            <div class="venue-socials">
+                                <a href="https://www.instagram.com/maliaotel/" target="_blank"><img
+                                        src="https://www.google.com/s2/favicons?domain=instagram.com" alt="IG"></a>
+                                <a href="https://www.facebook.com/p/MALİA-HOTEL-SİVAS-100063690678819/" target="_blank"><img
+                                        src="https://www.google.com/s2/favicons?domain=facebook.com" alt="FB"></a>
+                            </div>
+                        </div>
+                        <p class="inv-event-time">⏰ 19:00 - 00:00</p>
+                        <p class="inv-event-venue">Malia Hotel, Sivas</p>
+                        <div class="venue-contact-info">
+                            <p>📞 0532 340 49 58</p>
+                            <p>📍 Kardeşler Mah. Bağdat Cad. Sivas/Merkez</p>
+                            <p>🌐 maliaotel.com</p>
+                        </div>
+                        <button class="btn-gold btn-small"
+                            onclick="window.open('https://www.google.com/maps/dir/?api=1&destination=39.73423,37.03553', '_blank')">📍 Konuma Git</button>
+                    </div>
+                </div>
+
+                <div class="inv-quote-box">
+                    <p>"Bu özel günümüzde sevdiklerimizi aramızda görmekten büyük mutluluk duyarız."</p>
+                </div>
+
+                <div class="inv-footer-branding">
+                    <p class="inv-footer-text">DİJİTAL DAVETİYE 2026</p>
+                    <div class="brand-footer-text-small">byAdelDijital</div>
+                </div>
+
+                <button class="btn-rsvp-shortcut"
+                    onclick="switchSubTab('malia-rsvp', document.querySelectorAll('#venue-malia .nav-item')[2])">
+                    <span class="material-icons-outlined">event</span> Katılım Durumunu Bildir
+                </button>
+            </div>
+        </div>
+
+        <!-- RSVP Sub-page -->
+        <div id="malia-rsvp" class="sub-page hidden">
+            <div class="inv-phone-frame rsvp-frame">
+                <div class="rsvp-header">
+                    <img src="assets/adel_digital_logo.png" alt="Adel Digital" class="rsvp-logo-img">
+                </div>
+
+                <div class="rsvp-card-white"
+                    onclick="switchSubTab('malia-gallery', document.querySelectorAll('#venue-malia .nav-item')[1])">
+                    <div class="gallery-preview-mini">
+                        <img src="https://i.dugun.com/gallery/62691/preview_malia-hotel_hf24Y3hx.jpg" alt="Galeri">
+                        <div class="preview-text">
+                            <strong>Bizim Karelerimize Göz Atın</strong>
+                            <p>Fotoğraf galerisini görüntüle</p>
+                        </div>
+                        <span class="material-icons-outlined">chevron_right</span>
+                    </div>
+                </div>
+
+                <div id="rsvp-form-3" class="rsvp-form-container">
+                    <h2 class="rsvp-form-title">Bizimle Olacak mısınız?</h2>
+                    <p class="rsvp-form-desc">Bu özel günümüzde yanımızda olmanızdan mutluluk duyarız.</p>
+
+                    <div class="rsvp-input-group">
+                        <label>Adınız Soyadınız</label>
+                        <input type="text" id="rsvp-name-3" class="rsvp-input" placeholder="Adınız Soyadınız" name="name" required>
+                        <input type="hidden" id="rsvp-status-3" value="Geliyorum">
+                    </div>
+
+                    <div class="rsvp-choice-grid">
+                        <div class="rsvp-choice-card active" onclick="selectRSVP(this, 'Geliyorum', 'rsvp-status-3')">
+                            <div class="choice-icon"><span class="material-icons-outlined">check</span></div>
+                            <span class="choice-text">Geliyorum</span>
+                        </div>
+                        <div class="rsvp-choice-card" onclick="selectRSVP(this, 'Gelemiyorum', 'rsvp-status-3')">
+                            <div class="choice-icon"><span class="material-icons-outlined">close</span></div>
+                            <span class="choice-text">Gelemiyorum</span>
+                        </div>
+                    </div>
+
+                    <div class="rsvp-input-group">
+                        <label>Kaç kişi katılacaksınız?</label>
+                        <select id="rsvp-count-3" class="rsvp-select">
+                            <option value="1 Kişi">1 Kişi</option>
+                            <option value="2 Kişi">2 Kişi</option>
+                            <option value="3 Kişi">3 Kişi</option>
+                            <option value="4 Kişi">4 Kişi</option>
+                            <option value="5+ Kişi">5+ Kişi</option>
+                        </select>
+                    </div>
+
+                    <div class="rsvp-input-group">
+                        <label>Notunuz (Opsiyonel)</label>
+                        <textarea id="rsvp-message-3" class="rsvp-textarea"
+                            placeholder="Bizlere iletmek istediğiniz bir notunuz var mı?"></textarea>
+                    </div>
+
+                    <button type="button" class="btn-gold btn-full rsvp-submit"
+                        onclick="sendRSVP(this, 'Malia Hotel', 'Zeynep & Emre', 'rsvp-name-3', 'rsvp-status-3', 'rsvp-count-3', 'rsvp-message-3')">Cevabını Gönder</button>
+                </div>
+
+                <div class="inv-footer-branding">
+                    <p class="inv-footer-text">DİJİTAL DAVETİYE 2026</p>
+                    <div class="brand-footer-text-small">byAdelDijital</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery Sub-page -->
+        <div id="malia-gallery" class="sub-page hidden">
+            <div class="inv-phone-frame gallery-frame">
+                <div class="inv-badge">FOTOĞRAF GALERİSİ <span class="material-icons-outlined"
+                        style="font-size:12px; margin-left:5px;">share</span></div>
+                <div class="gallery-header">
+                    <h1 class="gallery-title">Bizim <span>Karelerimiz</span></h1>
+                    <p class="gallery-subtitle">En mutlu anlarımızdan özenle seçilmiş, sevgi dolu hikayemiz.</p>
+                </div>
+
+                <div class="gallery-filter-bar">
+                    <button class="filter-btn active" onclick="filterGallery('Tümü', this)">Tümü</button>
+                    <button class="filter-btn" onclick="filterGallery('Nişan', this)">Nişan</button>
+                    <button class="filter-btn" onclick="filterGallery('Dış Çekim', this)">Dış Çekim</button>
+                    <button class="filter-btn" onclick="filterGallery('Hazırlık', this)">Hazırlık</button>
+                    <button class="filter-btn" onclick="filterGallery('Mekan', this)">Mekan</button>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="Mekan" onclick="openLightbox(this)">
+                        <img src="https://i.dugun.com/gallery/62691/preview_malia-hotel_ZE1g4ERc.jpg" alt="Malia Hotel">
+                    </div>
+                    <div class="gallery-item" data-category="Mekan" onclick="openLightbox(this)">
+                        <img src="https://i.dugun.com/gallery/62691/preview_malia-hotel_hf24Y3hx.jpg" alt="Malia Hotel">
+                    </div>
+                    <div class="gallery-item" data-category="Mekan" onclick="openLightbox(this)">
+                        <img src="https://i.dugun.com/gallery/62691/preview_malia-hotel_xfMeAm2g.jpg" alt="Malia Hotel">
+                    </div>
+                    <div class="gallery-item" data-category="Nişan" onclick="openLightbox(this)">
+                        <img src="assets/nisan_1.png" alt="">
+                    </div>
+                    <div class="gallery-item" data-category="Dış Çekim" onclick="openLightbox(this)">
+                        <img src="assets/dis_cekim_1.png" alt="">
+                    </div>
+                    <div class="gallery-item" data-category="Hazırlık" onclick="openLightbox(this)">
+                        <img src="assets/hazirlik_1.png" alt="">
+                    </div>
+                </div>
+
+                <div class="inv-footer-branding">
+                    <p class="inv-footer-text">DİJİTAL DAVETİYE 2026</p>
+                    <div class="brand-footer-text-small">byAdelDijital</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <button class="nav-item active" onclick="switchSubTab('malia-home', this)">
+                <span class="material-icons-outlined">home</span>
+                <span>Ana Sayfa</span>
+            </button>
+            <button class="nav-item" onclick="switchSubTab('malia-gallery', this)">
+                <span class="material-icons-outlined">image</span>
+                <span>Galeri</span>
+            </button>
+            <button class="nav-item" onclick="switchSubTab('malia-rsvp', this)">
                 <span class="material-icons-outlined">event</span>
                 <span>Katılım</span>
             </button>
